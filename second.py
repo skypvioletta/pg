@@ -2,7 +2,7 @@ def cislo_text(cislo):
     cislo = int(cislo)
 
     if not 0 <= cislo <= 100:
-        raise ValueError("Číslo musí být v rozmezí od 0 do 100.")
+        raise ValueError("Cislo musi byt v rozmezi od 0 do 100.")
 
     jednotky = [
         "nula", "jedna", "dva", "tři", "čtyři", "pět",
@@ -49,6 +49,6 @@ def cislo_text(cislo):
 
 
 if __name__ == "__main__":
-    cislo = input("Zadej číslo: ")
+    cislo = input("Zadej cislo: ")
     text = cislo_text(cislo)
     print(text)
