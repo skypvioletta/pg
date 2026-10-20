@@ -5,31 +5,35 @@ def je_prvocislo(cislo):
     Prvočíslo je takové číslo větší než 1, které není dělitelné žádným jiným
     číslem než 1 a samo sebou.
     """
-   if cislo < 2:
+ import math
+
+def je_prvocislo(cislo):
+    if cislo <= 1:
+        return False
+    if cislo <= 3:
+        return True
+    if cislo % 2 == 0:
         return False
 
-    for i in range(2, int(cislo ** 0.5) + 1):
-        if cislo % i == 0:
+    for delitel in range(3, int(math.sqrt(cislo)) + 1, 2):
+        if cislo % delitel == 0:
             return False
+
     return True
 
 
 def vrat_prvocisla(maximum):
-    """
-    Funkce spocita vsechna prvocisla v rozsahu 1 az maximum
-    a vrati je jako seznam.
-    """
     maximum = int(maximum)
-    prvocisla = []
+    seznam = []
 
     for cislo in range(2, maximum + 1):
         if je_prvocislo(cislo):
-            prvocisla.append(cislo)
+            seznam.append(cislo)
 
-    return prvocisla
+    return seznam
 
 
 if __name__ == "__main__":
-    cislo = input("Zadej maximum: ")
+    cislo = int(input("Zadej maximum: "))
     prvocisla = vrat_prvocisla(cislo)
     print(prvocisla)
