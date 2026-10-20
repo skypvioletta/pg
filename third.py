@@ -17,12 +17,21 @@ def je_prvocislo(cislo):
     36 * 1
     Jak vidite v druhe polovine se dvojice opakuji, tzn. v tomto pripade staci overit delitelnost pouze do 6 (vcetne)
     """
-    return False
+    
+    def je_prvocislo(cislo):
+        if cislo <= 1:
+            return False
+        if cislo <= 3:
+            return True
+        if cislo % == 0:
+        for delitel in range(3, int(cislo):
+            if cislo % delitel == 0:
+        return False
 
 def vrat_prvocisla(maximum):
-    """
-    Funkce spocita vsechna prvocisla v rozsahu 1 az maximum a vrati je jako seznam.
-    """
+   maximum = int(maximum)
+    seznam = [] 
+
     return [2,3,5]
 
 if __name__ == "__main__":
