@@ -18,24 +18,33 @@ def je_prvocislo(cislo):
     Jak vidite v druhe polovine se dvojice opakuji, tzn. v tomto pripade staci overit delitelnost pouze do 6 (vcetne)
     """
     
-    def je_prvocislo(cislo):
-        if cislo <= 1:
-            return False
-        if cislo <= 3:
-            return True
-        if cislo % == 0:
-        for delitel in range(3, int(cislo):
-            if cislo % delitel == 0:
+   def je_prvocislo(cislo):
+    if cislo <= 1:
+        return False
+    if cislo <= 3:
+        return True
+    if cislo % 2 == 0:
         return False
 
-def vrat_prvocisla(maximum):
-   maximum = int(maximum)
-    seznam = [] 
+    for delitel in range(3, int(cislo ** 0.5) + 1, 2):
+        if cislo % delitel == 0:
+            return False
 
-    return [2,3,5]
+    return True
+
+
+def vrat_prvocisla(maximum):
+    maximum = int(maximum)
+    seznam = []
+
+    for cislo in range(2, maximum + 1):
+        if je_prvocislo(cislo):
+            seznam.append(cislo)
+
+    return seznam
+
 
 if __name__ == "__main__":
-    cislo = input("Zadej maximum: ")
+    cislo = int(input("Zadej maximum: "))
     prvocisla = vrat_prvocisla(cislo)
     print(prvocisla)
-
