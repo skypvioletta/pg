@@ -1,11 +1,4 @@
-def je_prvocislo(cislo):
-    """
-    Funkce ověří, zda zadané číslo je nebo není prvočíslo a vrátí True nebo False.
-
-    Prvočíslo je takové číslo větší než 1, které není dělitelné žádným jiným
-    číslem než 1 a samo sebou.
-    """
- import math
+import math
 
 def je_prvocislo(cislo):
     if cislo <= 1:
